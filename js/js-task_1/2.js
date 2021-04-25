@@ -1,0 +1,20 @@
+//2
+let a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18;
+console.log("================задание 2===================="); 
+console.log("a1 =",a1 = 3 % 5, typeof(a1));
+console.log("a2 =",a2 = 5 + "3", typeof(a2));
+console.log("a3 =",a3 = '5' - 3, typeof(a3));
+console.log("a4 =",a4 = 75 + 'кг', typeof(a4));
+console.log("a5 =",a5 = 785 * 653 , typeof(a5));
+console.log("a6 =",a6=100/25, typeof(a6));
+console.log("a7 =",a7=0*0, typeof(a7));
+console.log("a8 =",a8=0/2, typeof(a8));
+console.log("a9 =",a9=89/0, typeof(a9));
+console.log("a10 =",a10=98+2, typeof(a10));
+console.log("a11 =",a11=5-98, typeof(a11));
+console.log("a12 =",a12=(8+56*4)/5, typeof(a12));
+console.log("a13 =",a13=(9-12)*7/(5+2), typeof(a13));
+console.log("a14 =",a14=+"123", typeof(a14));
+console.log("a15 =",a15= 1||0, typeof(a15));
+console.log("a16 =",a16= false || true, typeof(a16));
+console.log("a17 =",a17= true>0, typeof(a17));
