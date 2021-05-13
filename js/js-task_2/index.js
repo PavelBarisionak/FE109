@@ -3,6 +3,7 @@
 console.log('Задание 1')
 let name, age, city, phone, email, company;
 
+<<<<<<< HEAD
 Firstname = prompt('введите ваше имя');
 age = prompt('введите ваш возраст');
 city = prompt('введите ваш город проживания');
@@ -86,3 +87,6 @@ function bonusTime(salary, bonus) {
         
       }
   
+=======
+ 
+>>>>>>> master

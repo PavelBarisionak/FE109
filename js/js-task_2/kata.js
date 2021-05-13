@@ -9,3 +9,4 @@ function bonusTime(salary, bonus) {
 function getGrade (s1, s2, s3) {
    
 }
+ 
