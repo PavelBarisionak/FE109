@@ -102,7 +102,7 @@ console.log('логин  - '+ login('test@mail.ru'));
 регулярные выражения.
 
  function teltest(tel){
-        let regexp = /\+\d{1,3}(\s|-|\(|)\d{2,3}(\s|-|\)|)\d{7}/gi;
+        let regexp = /(|\+)\d{1,3}(\s|-|\(|)\d{2,3}(\s|-|\)|)\d{3}(|\s|-)\d{2}(|\s|-)\d{2}/gi;
         console.log(regexp.test(tel));
     }
     
@@ -187,4 +187,65 @@ console.log('логин  - '+ login('test@mail.ru'));
 
       }
       console.log(testit([2,2,2,4,5,2,5,6,2,6,6,5]));
-      */
+      
+
+      13. (задание сложности hard)
+    Напишите ф-цию, которая должна проверить правильность ввода адреса
+    эл. почты, неиспользуя регулярные выражения. 
+    
+    Почта верна при условии:
+    
+    a. весь адрес не должен содержать русские буквы и спецсимволы, кроме
+    одной «собачки», знака подчеркивания, дефиса и точки, причем они не могут
+    быть первыми и последними в адресе, и идти подряд, например: «..», «@.»,
+    «.@» или «@@», «_@», «@-», «--» и т.п.
+    
+    b. имя эл. почты (до знака @) должно быть длиной более 2 символов, причем
+    имя может содержать только буквы, цифры, но не быть первыми и
+    единственными в имени, и точку.
+    
+    c. после последней точки и после @, домен верхнего уровня (ru, by, com и
+    т.п.) не может быть длиной менее 2 и более 11 символов. 
+    */
+
+    let mail = "35heghb@gmail.com";
+    let symbol = ["-", ".", "@", "_"];
+    let kir = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ь', 'ы', 'ъ', 'э', 'ю', 'я','А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ь', 'Ы', 'Ъ', 'Э', 'Ю', 'Я'];
+    let symb = ['!', '@', '#', '$', '%', '&', '?', '-', '+', '=', '~'];
+    function checkMail(mail) {
+        let mailBefore = mail.slice(0, mail.indexOf("@"));
+        let mailAfter = mail.slice(mail.indexOf("@")+1)
+        if (mailBefore.length <=2) return ("длинна имени менее 2 символов")
+        else {
+            if (!isNaN(mailBefore[0])) return ("первый элемент имени либо все элементы имени это цифра")//первая число
+        else {for (let i=0; i<mail.length; i++){
+            for (let j=0; j<kir.length; j++){
+                if (mail[i] == kir[j]) return ("содержаться русские буквы")// русские буквы
+        else {
+             for (let i=0; i<mailBefore.length; i++){
+                for (let j=0; j<symb.length; j++){
+                    if (mailBefore[i] == symb[j]) return ("в имени содержаться спецсимволы")
+        else {
+            for (let i=0; i<mailAfter.length; i++){
+                for (let j=0; j<symb.length; j++){
+                    if (mailAfter[i] == symb[j]) return ("содержаться символы после @")
+        else for (let i=0; i<mail.length; i++){
+            for (let j=0; j<symbol.length; j++){
+                if (mail[i] == symbol[j] && mail[i+1]== symbol[j]) return ("содержаться повторяющиеся символы")
+        else for (let j=0; j<symbol.length; j++){
+            if (mail[0] == symbol[j])  return ("первый символ является спецсимволом")
+        else for (let j=0; j<symbol.length; j++){
+            if (mail[mail.length-1] == symbol[j]) return("последний символ является спецсимволом") 
+        /*else for (let i=mail.length-1; i>=0; i--){
+            let count = 0;
+            if (mail[i] !== '.') {
+                count++;}
+            console.log(count);
+        }*/
+        }
+        }}}}}}}}}}}}}
+    }
+
+    console.log(checkMail(mail));
+
+    mail
