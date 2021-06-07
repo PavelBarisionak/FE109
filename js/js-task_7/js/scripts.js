@@ -142,21 +142,19 @@ let kontakti = {
     console.log(kontakti.checklastname());
     console.log(kontakti.teltest());
     
-	
+*/	
 	
 	
 //********************************************************************	
 // ВАРИАНТ С Ф-ЦИЕЙ КОНСТРУКТОРОМ (НЕ РАБОТАЕТ)
 //************************************************************
 
-let Kontakti = function() {
-    this.get = function(firstname,lastname, age, phonenumber, email){
-        this.firstname = firstname,
-        this.lastname = lastname,
-        this.age = age,
-        this.phonenumber = phonenumber,
-        this.email = email,
-    };  
+let Kontakti = function(firstname,lastname, age, phonenumber, email) {    
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.age = age;
+        this.phonenumber = phonenumber;
+        this.email = email;      
     this.checkage = function() {
             if (this.age < 0) return ('Возраст не может быть отрицательным числом');
             else if (this.age < 18) return ('Возраст менее 18 лет');
@@ -181,11 +179,11 @@ let Kontakti = function() {
     };
     }
        
-    let kont1 = new Kontakti.get("Иван","Иванов",25,"+375291234567","pochta@mail.ru");
-    let kont2 = new Kontakti.get("Перт","Петров",32,"+375297777777","petr@mail.ru");
-    let kont3 = new Kontakti.get("Сергей","Сергеевич",44,"+375-44-654-76-25","serge@mail.ru");
+    let kont1 = new Kontakti("Иван","Иванов",25,"+375291234567","pochta@mail.ru");
+    let kont2 = new Kontakti("Перт","Петров",32,"+375297777777","petr@mail.ru");
+    let kont3 = new Kontakti("Сергей","Сергеевич",44,"+375-44-654-76-25","serge@mail.ru");
 
-    console.log(Kontakti.checkage()) ;
-    console.log(Kontakti.checkfirstname());
-    console.log(Kontakti.checklastname());
-    console.log(Kontakti.teltest());
+    console.log(kont1.checkage()) ;
+    console.log(kont1.checkfirstname());
+    console.log(kont1.checklastname());
+    console.log(kont1.teltest());
