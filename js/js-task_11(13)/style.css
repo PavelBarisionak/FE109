@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{background-color: rgb(252, 247, 241);}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.wrapper {
+    margin: 30px auto;
+}
+
+.formForUser {
+    width: 350px;
+    margin: 30px auto;
+}
+
+.wrapperForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.firstName,
+.email,
+.address,
+.phone{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 10px;
+    padding-bottom: 20px;
+}
+.contactListAll,
+thead,
+.contactList {
+    display: block;
+    justify-content: center;
+}
+
+.submit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-delAll,
+.btn-clear,
+.btn-submit {
+    width: 120px;
+    height: 40px;
+    display: block;
+}
+
+.btn-submit {
+    background-color: antiquewhite;
+    border: 2px solid rgb(241, 204, 156);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgb(63, 39, 8)
+}
+.btn-submit:hover,
+.btn-clear:hover,
+.btn-delAll:hover
+ {
+    opacity: .8;
+}
+
+.btn-clear {
+    background-color: antiquewhite;
+    border: 2px solid rgb(241, 204, 156);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: rgb(63, 39, 8);
+}
+
+.btn-delAll {    
+    width: 180px;
+    background-color: antiquewhite;
+    border: 2px solid rgb(241, 204, 156);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: rgb(63, 39, 8);
+    margin: 0 auto;
+}
+
+tr {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 3fr 3fr 1fr 1fr;
+    margin: 0 auto 10px auto;
+    background-color: rgb(179, 218, 235);
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.elemId {
+    text-align: center;
+}
+
+thead>tr {    
+    padding-bottom: 10px;
+    padding-top: 20px;    
+    font-weight: bold; 
+    background-color: antiquewhite;   
+}
+
+.pensil {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url(images/pencil.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px 25px;
+}
+.trash {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(images/trash.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+}
+
+table {
+    margin-bottom: 30px;
+}
