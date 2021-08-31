@@ -91,7 +91,7 @@ body{
 /* пагинация */
 .image-slider .swiper-pagination {
     bottom: 0;
-}
+} 
 /* буллеты */
 .image-slider .swiper-pagination-bullet {
     width: 20px;
@@ -112,7 +112,7 @@ body{
     background-color: #7a956b;
 }
 
-/* Скролл */
+/* Скролл*/
 .image-slider .swiper-scrollbar-drag {
     cursor: pointer;
     background-color: #7a956b;
@@ -121,7 +121,7 @@ body{
 /* Автоширина */
 .image-slider .swiper-slider {
     width: auto;  
-}
+} 
 
 /* Вертикальный слайдер
 .image-slider {
